@@ -1,6 +1,6 @@
 ---
 layout: post
-title: mac下写在jdk
+title: mac下卸载jdk
 ---
 
 官方的卸载方法<http://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-jdk.html#uninstall>
