@@ -9,3 +9,4 @@ title: mac下卸载jdk
 
     cd /Library/Java/JavaVirtualMachines
     rm -rf jdk1.7.0_06.jdk
+
