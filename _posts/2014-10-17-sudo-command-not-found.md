@@ -1,6 +1,6 @@
 ---
 layout: post
-titile: ubuntu给命令添加sudo权限
+title: ubuntu给命令添加sudo权限
 ---
 
 
