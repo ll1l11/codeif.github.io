@@ -43,11 +43,17 @@ virtualenvwrapper默认安装在安装在/usr/local/bin, 打开: /usr/local/bin/
 
 * PyCharm <https://www.jetbrains.com/pycharm/>
 
+### 版本管理工具
+
 * hg（mercurial）
 
 使用pip安装:
 
     sudo pip install mercurial
+
+* TortoiseHg <https://bitbucket.org/tortoisehg/thg/wiki/developers/MacOSX>
+
+* GitHub 客户端 <https://mac.github.com/>
 
 ### 笔记软件
 
