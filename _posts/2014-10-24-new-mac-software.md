@@ -19,9 +19,13 @@ title: 新mac软件安装记录
 
 * pip
 
+安装命令:
+
     sudo easy_install pip
 
 * virtualenv, virtualenvwrapper
+
+python虚拟环境:
 
     sudo pip install virtualenv
     sudo pip install virtualenvwrapper
@@ -37,9 +41,11 @@ virtualenvwrapper默认安装在安装在/usr/local/bin, 打开: /usr/local/bin/
 
 * Mou 一款md5编辑器 <http://mouapp.com/>
 
-* PyCharm 
+* PyCharm <https://www.jetbrains.com/pycharm/>
 
 * hg（mercurial）
+
+使用pip安装:
 
     sudo pip install mercurial
 
