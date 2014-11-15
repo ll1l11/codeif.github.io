@@ -6,7 +6,7 @@ title: ubuntu install squid3, 并搭建安全代理服务器
 
 ### 安装支持ssl的squid3
 
-    sudo apt-get install devscripts build-essential
+    sudo apt-get install devscripts build-essential squid-langpack ssl-cert
     sudo apt-get source squid3
     sudo apt-get build-dep squid3
     cd squid3-3.3.8/
@@ -24,7 +24,6 @@ title: ubuntu install squid3, 并搭建安全代理服务器
 
     sudo debuild -us -uc
     cd ..
-    sudo apt-get install squid-langpack
     sudo dpkg -i squid3-common_3.3.8-1ubuntu6.1_all.deb
     sudo dpkg -i squid3_3.3.8-1ubuntu6.1_amd64.deb
     sudo dpkg -i squid3-dbg_3.3.8-1ubuntu6.1_amd64.deb
@@ -51,9 +50,9 @@ title: ubuntu install squid3, 并搭建安全代理服务器
 
 生成证书:
 
-    sudo openssl req -new -newkey rsa:2048 -nodes -keyout squid.key -out squid.csr
-    sudo openssl req -x509 -days 3650 -key squid.key -in squid.csr > squid.crt
-
+    sudo -i  #需要切换到root用户
+    openssl req -new -newkey rsa:2048 -nodes -keyout squid.key -out squid.csr
+    openssl req -x509 -days 3650 -key squid.key -in squid.csr > squid.crt
 
 最终可以简化成如下的配置:
 
