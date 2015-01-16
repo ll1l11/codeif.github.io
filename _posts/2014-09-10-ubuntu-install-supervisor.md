@@ -24,7 +24,7 @@ title: ubuntu安装supervisor
     logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
 
     [include]
-    files = /etc/supervisor/conf.d/*.conf
+    files = /etc/supervisor/conf.d/*.ini
 
 我们把要启动的程序添加到 /etc/supervisor/conf.d/ 下就可以了
 
