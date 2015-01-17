@@ -18,10 +18,14 @@ title: ubuntu安装supervisor
 然后使用vim编辑/etc/supervisor/supervisord.conf, 主要是改下输出文件的位置, 例如:
 
     [unix_http_server]
-    file=/var/run/supervisor.sock   ; (the path to the socket file)
+    file=/var/run/supervisor/supervisor.sock   ; (the path to the socket file)
 
     [supervisord]
     logfile=/var/log/supervisor/supervisord.log ; (main log file;default $CWD/supervisord.log)
+    pidfile=/var/run/supervisor/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
+
+    [supervisorctl]
+    serverurl=unix:///var/run/supervisor/supervisor.sock ; use a unix:// URL  for a unix socket
 
     [include]
     files = /etc/supervisor/conf.d/*.ini
