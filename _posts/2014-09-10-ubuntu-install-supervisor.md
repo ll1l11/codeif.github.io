@@ -41,6 +41,7 @@ title: ubuntu安装supervisor
 
     DAEMON=/usr/local/bin/supervisord
     SUPERVISORCTL=/usr/local/bin/supervisorctl
+    PIDFILE=/var/run/supervisor/$NAME.pid
 
 
 执行下面的命令:
