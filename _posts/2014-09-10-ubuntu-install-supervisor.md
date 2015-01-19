@@ -38,6 +38,11 @@ title: ubuntu安装supervisor
     DAEMON=/usr/local/bin/supervisord
     SUPERVISORCTL=/usr/local/bin/supervisorctl
 
+创建文件夹:
+
+    sudo mkdir -p /var/run/supervisor
+    sudo mkdir -p /var/log/supervisor
+
 
 执行下面的命令:
 
