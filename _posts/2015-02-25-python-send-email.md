@@ -22,6 +22,19 @@ title: python发送email
 
 msg需要\n开头, 否则看不到正文
 
+如果使用ssl的加密方式, 参考: <http://stackoverflow.com/questions/64505/sending-mail-from-python-using-smtp>
+
+代码如下:
+
+
+    server = smtplib.SMTP('smtp.qq.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.ehlo()
+    server.login('username', 'passwd')
+
+
+
 一个带主题和内容的例子
 
 
