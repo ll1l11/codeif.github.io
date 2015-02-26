@@ -19,3 +19,48 @@ title: python发送email
 
     msg = '\nHello!'
     server.sendmail('from@qq.com', 'to@qq.com', msg)
+
+msg需要\n开头, 否则看不到正文
+
+一个带主题和内容的例子
+
+
+    # -*- coding: utf-8 -*-
+    import smtplib
+    from email.MIMEMultipart import MIMEMultipart
+    from email.MIMEText import MIMEText
+
+    fromaddr = 'from@qq.com'
+    toaddr = 'to@qq.com'
+    ccaddr = 'cc@qq.com'
+
+    msg = MIMEMultipart()
+    msg['From'] = fromaddr
+    msg['To'] = toaddr
+    msg['Cc'] = ccaddr
+    msg['Subject'] = 'this is subject'
+
+    body = 'this is body'
+    msg.attach(MIMEText(body, 'plain'))
+
+    text = msg.as_string()
+    print text
+
+
+    server = smtplib.SMTP('smtp.qq.com', 25)
+    server.login('username', 'passwd')
+    server.sendmail(fromaddr, toaddr, text)
+
+如果发送html邮件, 如下写:
+
+    body = '<a href="http://www.codeif.com/">codeif</a>'
+    msg.attach(MIMEText(body, 'html'))
+
+邮件中带有附件:
+
+    # 附件
+    att = MIMEText(open('/Users/xyz/1.txt', 'rb').read(), 'base64', 'utf-8')
+    att['Content-Type'] = 'application/octet-stream'
+    att['Content-Disposition'] = 'attachment; filename="123.txt"'
+    msg.attach(att)
+
